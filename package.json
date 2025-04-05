@@ -1,0 +1,30 @@
+{
+  "name": "brainfuck-vm",
+  "version": "1.0.0",
+  "description": "A WebAssembly-based lightweight Brainfuck VM for Node.js",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "npm run build:wasm", 
+    "build:wasm": "emcc lib/vm/bf_vm.c -o lib/vm/bf_vm.js -O3 -s WASM=1 -s MODULARIZE=1 -s EXPORTED_RUNTIME_METHODS=['cwrap'] -s EXPORTED_FUNCTIONS=['_bfvm_run','_bfvm_mem_alloc','_bfvm_mem_free'] -s ALLOW_MEMORY_GROWTH=1 -s EXPORT_ES6=0 -s ENVIRONMENT='node'",
+    "clean": "rm -f lib/vm/bf_vm.js lib/vm/bf_vm.wasm",
+    "test": "node tests/bf-vm.test.js",
+    "pretest": "npm run build" 
+  },
+  "keywords": [
+    "brainfuck",
+    "vm",
+    "wasm",
+    "webassembly",
+    "interpreter",
+    "performance"
+  ],
+  "author": "! Ｄᴇᴠɪʟɪѕʜ ｃʜʀᴏɴɪᴄʟᴇѕ", 
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "chalk": "^4.1.2" 
+  }
+}

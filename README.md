@@ -1,7 +1,7 @@
 # Brainfuck VM (Wasm Powered)
 
-[![npm version](https://img.shields.io/npm/v/brainfuck-vm.svg?style=flat-square)](https://www.npmjs.com/package/brainfuck-vm) 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/Apache-2.0)
+[![npm version](https://img.shields.io/npm/v/bf-vm.svg?style=flat-square)](https://www.npmjs.com/package/brainfuck-vm) 
+[![License: MIT](https://img.shields.io/badge/License-Apache-yellow.svg?style=flat-square)](https://opensource.org/licenses/Apache-2.0)
 
 A high-performance Brainfuck interpreter for Node.js, leveraging the speed of C compiled to WebAssembly (Wasm). Execute Brainfuck code efficiently with customizable memory limits and get performance metrics.
 
@@ -16,9 +16,9 @@ A high-performance Brainfuck interpreter for Node.js, leveraging the speed of C 
 ## Installation
 
 ```bash
-npm install brainfuck-vm
+npm install bf-vm
 # or
-yarn add brainfuck-vm
+yarn add bf-vm
 ```
 
 *(Make sure you have a C compiler compatible with Emscripten, like GCC or Clang, and the Emscripten SDK installed if you intend to build from source. The pre-compiled Wasm module should work out-of-the-box for standard Node.js environments.)*
@@ -28,7 +28,7 @@ yarn add brainfuck-vm
 The primary way to use the VM is through the `execute` function.
 
 ```javascript
-const { execute, DEFAULT_MEMORY_SIZE } = require('brainfuck-vm');
+const { execute, DEFAULT_MEMORY_SIZE } = require('bf-vm');
 
 // Example 1: Hello World!
 const helloWorldCode = "++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.";

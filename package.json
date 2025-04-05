@@ -1,5 +1,5 @@
 {
-  "name": "brainfuck-vm",
+  "name": "bf-vm",
   "version": "1.0.0",
   "description": "A WebAssembly-based lightweight Brainfuck VM for Node.js",
   "main": "lib/index.js",
@@ -22,6 +22,10 @@
     "performance"
   ],
   "author": "! Ｄᴇᴠɪʟɪѕʜ ｃʜʀᴏɴɪᴄʟᴇѕ", 
+  "repository": {
+        "type": "git",
+        "url": "https://github.com/Darknessking13/Brainfuck-vm.git"
+    },
   "license": "Apache-2.0",
   "devDependencies": {
     "chalk": "^4.1.2" 
